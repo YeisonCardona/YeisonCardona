@@ -33,12 +33,11 @@ With 10+ years of Python experience, I work across:
 
 ### 📘 Featured Projects
 
-- [`BEAM`](https://github.com/dunderlab/BEAM): Real-time electromagnetic spectrum monitoring  
 - [`CHASKI`](https://github.com/dunderlab/python-chaski): Distributed TCP/IP messaging framework  
-- [`BCI-Framework`](https://github.com/UN-GCPDS/bci-framework): EEG experiments and real-time visualizations  
-- [`OpenBCI-Stream`](https://github.com/UN-GCPDS/openbci-stream): Streaming EEG/EMG/ECG data with Python  
+- [`BCI-Framework`](https://github.com/dunderlab/bci-framework): EEG experiments and real-time visualizations  
+- [`OpenBCI-Stream`](https://github.com/dunderlab/openbci-stream): Streaming EEG/EMG/ECG data with Python  
 - [`Radiant`](https://github.com/dunderlab/python-radiantframework): Brython-based reactive web framework  
-- [`Qt-Material`](https://github.com/UN-GCPDS/qt-material): Material Design for PyQt/PySide
+- [`Qt-Material`](https://github.com/dunderlab/qt-material): Material Design for PyQt/PySide
 
 ℹ️ [More projects](https://github.com/YeisonCardona?tab=repositories) on GitHub.
 
