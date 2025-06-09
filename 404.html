@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta charset="utf-8">
+  <title>PortfolioSpa</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // Handle GitHub Pages redirect for client-side routing
+    (function() {
+      // Check if we need to redirect
+      const redirect = sessionStorage.getItem('redirect');
+      if (redirect) {
+        // Remove the redirect flag
+        sessionStorage.removeItem('redirect');
+        // Redirect to the original URL
+        window.history.replaceState(null, null, redirect);
+      }
+
+      // Handle query parameter-based redirects (from 404.html)
+      const p = new URLSearchParams(window.location.search).get('p');
+      if (p) {
+        const q = new URLSearchParams(window.location.search).get('q');
+        const url = p + (q ? '?' + q : '') + window.location.hash;
+        window.history.replaceState(null, null, url);
+      }
+    })();
+  </script>
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+<body>
+  <app-root></app-root>
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-ITNPCLO7.js" type="module"></script></body>
+</html>
