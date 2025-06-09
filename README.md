@@ -60,3 +60,15 @@ With 10+ years of Python experience, I work across:
 📫 **Let's connect:**  
 Email: [yencardonaal@unal.edu.co](mailto:yencardonaal@unal.edu.co)  
 Location: Manizales, Colombia  
+
+---
+
+### 🌐 Portfolio Website
+
+This repository includes an Angular-based portfolio website configured for GitHub Pages deployment. The site is automatically deployed when changes are pushed to the main branch.
+
+- **Live Site:** [https://yeisoncardona.github.io/portfolio-spa/](https://yeisoncardona.github.io/portfolio-spa/)
+- **Technology:** Angular 19
+- **Deployment:** GitHub Pages via GitHub Actions
+
+For more details on the deployment configuration, see the [portfolio-spa README](portfolio-spa/README.md).
