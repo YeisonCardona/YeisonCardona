@@ -1,34 +1,25 @@
-<!doctype html>
-<html lang="en" data-beasties-container>
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-  <title>PortfolioSpa</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Page Not Found</title>
   <script>
-    // Handle GitHub Pages redirect for client-side routing
-    (function() {
-      // Check if we need to redirect
-      const redirect = sessionStorage.getItem('redirect');
-      if (redirect) {
-        // Remove the redirect flag
-        sessionStorage.removeItem('redirect');
-        // Redirect to the original URL
-        window.history.replaceState(null, null, redirect);
-      }
+    // Redirect to index.html to handle client-side routing
+    const segmentCount = 1; // Adjust this value based on your GitHub Pages URL structure
+    const location = window.location;
+    const redirectUrl = location.protocol + '//' + location.hostname +
+      (location.port ? ':' + location.port : '') +
+      location.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+      location.pathname.slice(1).split('/').slice(segmentCount).join('/') +
+      (location.search ? '&q=' + location.search.slice(1) : '') +
+      (location.hash || '');
 
-      // Handle query parameter-based redirects (from 404.html)
-      const p = new URLSearchParams(window.location.search).get('p');
-      if (p) {
-        const q = new URLSearchParams(window.location.search).get('q');
-        const url = p + (q ? '?' + q : '') + window.location.hash;
-        window.history.replaceState(null, null, url);
-      }
-    })();
+    sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+    window.location.replace(redirectUrl);
   </script>
-<link rel="stylesheet" href="styles-5INURTSO.css"></head>
+</head>
 <body>
-  <app-root></app-root>
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-ITNPCLO7.js" type="module"></script></body>
+  <h1>Page Not Found</h1>
+  <p>If you are not redirected automatically, <a href="/">click here</a> to go to the homepage.</p>
+</body>
 </html>
