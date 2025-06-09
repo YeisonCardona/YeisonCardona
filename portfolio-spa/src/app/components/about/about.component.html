@@ -1,0 +1,52 @@
+<div class="about-container">
+  <div class="header">
+    <h1>{{ name }}</h1>
+    <h2>{{ title }}</h2>
+  </div>
+
+  <div class="section">
+    <h3>🧠 About Me</h3>
+    <p>{{ about }}</p>
+    <p [innerHTML]="experience"></p>
+  </div>
+
+  <div class="section">
+    <h3>📍 Current Roles</h3>
+    <ul>
+      @for (role of roles; track $index) {
+        <li>🧑‍{{ role }}</li>
+      }
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>🗣️ Languages</h3>
+    <ul>
+      @for (lang of languages; track $index) {
+        <li>
+          @if (lang.language === 'Spanish') {
+            🇪🇸
+          } @else if (lang.language === 'English') {
+            🇬🇧
+          }
+          {{ lang.language }} – {{ lang.level }}
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="section contact">
+    <h3>📫 Let's connect</h3>
+    <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+    <p>Location: {{ location }}</p>
+
+    <div class="social-links">
+      @for (link of socialLinks; track $index) {
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+          <span class="icon-{{ link.icon }}"></span>
+          {{ link.name }}
+        </a>
+      }
+    </div>
+  </div>
+</div>

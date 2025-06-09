@@ -1,0 +1,65 @@
+<div class="contact-container">
+  <div class="header">
+    <h2>📫 Get In Touch</h2>
+    <p>Feel free to reach out for collaborations or just a friendly chat</p>
+  </div>
+
+  <div class="contact-content">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> <a href="mailto:{{ email }}">{{ email }}</a></p>
+      <p><strong>Location:</strong> {{ location }}</p>
+
+      <div class="social-links">
+        <h3>Connect with me</h3>
+        <div class="social-icons">
+          @for (link of socialLinks; track link.name) {
+            <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="social-icon {{ link.icon }}">
+              {{ link.name }}
+            </a>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            [(ngModel)]="formData.message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>
