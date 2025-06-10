@@ -54,4 +54,12 @@
 
 .section-container--XSmall mat-grid-tile.tool-icon {
   @include tool-icon-sizes(30px);
+
+}
+
+
+
+.section-container--XSmall p {
+  font: var(--mat-sys-body-large);
+  zoom: 0.9;
 }

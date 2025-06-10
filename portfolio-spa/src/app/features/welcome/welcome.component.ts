@@ -1,7 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {ThemeService} from '../../core/services/theme/theme.service';
 import {DOCUMENT} from '@angular/common';
 
 

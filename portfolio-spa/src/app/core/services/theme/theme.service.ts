@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MemoizeService } from '../memoize/memoize.service';
 
+
 import {
   applyTheme,
   hexFromArgb,
@@ -9,6 +10,9 @@ import {
   argbFromHex,
 } from '@material/material-color-utilities';
 import {ActivatedRoute} from '@angular/router';
+
+
+export type ThemeMode = 'dark' | 'light' | 'auto';
 
 /**
  * The ThemeService class is responsible for dynamically applying a Material Theme
@@ -21,11 +25,40 @@ import {ActivatedRoute} from '@angular/router';
 export class ThemeService {
   private memoizedResults = new Map<string, number>();
   private memoizedPalettes = new Map<string, any>();
+  private currentThemeMode: ThemeMode = 'auto';
 
   constructor(
     private memoizeService: MemoizeService,
-  ) {}
+  ) {
+    // this.setThemeMode('auto');
+  }
 
+  generateRandomColor(): string {
+    // Genera un color hexadecimal aleatorio
+    const randomHex = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+    // Convierte a ARGB y de vuelta a hex para asegurar el formato correcto
+    const argb = argbFromHex(randomHex);
+    return hexFromArgb(argb);
+  }
+
+  getCurrentMode(): 'dark' | 'light' {
+    let mode = localStorage.getItem('themeMode') as ThemeMode || 'auto';
+    if (mode==='auto') {
+      let systemDark = localStorage.getItem('themeMode') === 'dark';
+      mode = systemDark ? 'dark' : 'light';
+    }
+    return mode
+  }
+
+  setThemeMode(mode: ThemeMode): void {
+    const savedColor = localStorage.getItem('themeColor');
+    const savedTarget = localStorage.getItem('themeTarget') || 'html';
+    if (savedColor) {
+      this.applyMaterialThemeFromColor(savedColor, savedTarget, mode);
+    }
+    // const targetElement = document.querySelector(savedTarget) as HTMLElement;
+    // targetElement.style.setProperty('color-scheme', mode);
+  }
 
   async applyVibrantFromImage(img: HTMLImageElement | string, target: HTMLElement | string = "html"): Promise<void> {
     // This method has been simplified to use Material Design color utilities instead of node-vibrant
@@ -34,7 +67,7 @@ export class ThemeService {
     return Promise.resolve();
   }
 
-  async applyMaterialThemeFromImage(img: HTMLImageElement | string, target: HTMLElement | string = "html", dark: any = 'auto'): Promise<void> {
+  async applyMaterialThemeFromImage(img: HTMLImageElement | string, target: HTMLElement | string = "html", mode: ThemeMode = 'auto'): Promise<void> {
 
     if (typeof img === 'string') {
       const imageElement = new Image();
@@ -44,7 +77,8 @@ export class ThemeService {
     }
 
     if (typeof target === 'string') {
-      target = document.querySelector(target) as HTMLElement;
+      const savedTarget = localStorage.getItem('themeTarget');
+      target = document.querySelector(savedTarget || target) as HTMLElement;
     }
 
     const memoKey = typeof img === 'string' ? img : img.src;
@@ -55,28 +89,40 @@ export class ThemeService {
     );
 
     // Update the application theme using the seed color value from the image
-    this.applyMaterialThemeFromColor(hexFromArgb(seedHex), target, dark);
+    this.applyMaterialThemeFromColor(hexFromArgb(seedHex), target, mode);
 
     // applyVibrantFromImage has been simplified and no longer does anything useful
     // await this.applyVibrantFromImage(img, target);
 
   }
 
-  applyMaterialThemeFromColor(seedHex: string, target: HTMLElement | string = "html", dark: any = 'auto'): void {
+
+  applyMaterialThemeFromColor(seedHex: string, target: HTMLElement | string = "html", mode: ThemeMode = 'auto'): void {
     // Generate a complete Material Design 3 theme based on the extracted color
     const theme = themeFromSourceColor(argbFromHex(seedHex));
 
-    let systemDark: boolean;
-    if (dark==='auto') {
-      // Detect if user's system is in dark mode
-      systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    } else {
-      systemDark = dark;
+    // Save the current theme color and target
+    localStorage.setItem('themeColor', seedHex);
+    localStorage.setItem('themeTarget', typeof target === 'string' ? target : 'html');
+
+    if (mode !== 'auto') {
+      localStorage.setItem('themeMode', mode);
     }
+
+    let systemDark: boolean;
+    if (mode==='auto') {
+      // systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      systemDark = localStorage.getItem('themeMode') === 'dark';
+    } else {
+      systemDark = mode === 'dark';
+    }
+    mode = systemDark ? 'dark' : 'light';
 
     if (typeof target === 'string') {
       target = document.querySelector(target) as HTMLElement;
     }
+    target.style.setProperty('color-scheme', mode);
+
 
     // Apply the generated theme to the document body with dark mode consideration
     applyTheme(theme, {

@@ -16,8 +16,8 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
     NavbarComponent,
     WelcomeComponent,
     AboutComponent,
-    ContactComponent,
     ProjectsComponent,
+    ContactComponent,
     SkillsComponent
   ],
   templateUrl: './app.component.html',
@@ -30,8 +30,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.themeService.applyMaterialThemeFromColor("#769CDF", "html", true);
-
+    this.themeService.applyMaterialThemeFromColor(this.themeService.generateRandomColor(), "html");
   }
 
 
