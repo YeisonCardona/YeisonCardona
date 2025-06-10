@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+.section-navbar {
+  padding: 16px 0px;
+  background-color: var(--mat-sys-primary-container);
+  box-shadow: 0px 8px 16px rgb(0 0 0 / 20%);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+::ng-deep :root {
+  @include mat.tabs-overrides((
+    active-label-text-color: var(--mat-sys-primary),
+    inactive-label-text-color: var(--mat-sys-primary),
+    active-hover-label-text-color: var(--mat-sys-primary),
+    inactive-hover-label-text-color: var(--mat-sys-primary),
+    active-focus-label-text-color: var(--mat-sys-primary),
+    inactive-focus-label-text-color: var(--mat-sys-primary),
+    label-text-size: 1rem,
+    divider-height: 0px,
+  ));
+}
+

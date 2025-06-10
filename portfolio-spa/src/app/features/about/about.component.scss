@@ -1,0 +1,30 @@
+.section-container {
+}
+
+.section-container .about-text {
+
+}
+
+.section-container .about-text p {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.section-container mat-grid-tile.tool-icon{
+  font-size: 80px;
+  overflow: visible;
+  transition: transform 300ms ease;
+}
+
+.section-container mat-grid-tile.tool-icon.tool-icon--size2 {
+  font-size: 160px;
+}
+
+.section-container mat-grid-tile.tool-icon.tool-icon--vsize08 {
+  font-size: 64px;
+}
+
+.section-container mat-grid-tile.tool-icon:hover {
+  transform: scale(1.2);
+}
+

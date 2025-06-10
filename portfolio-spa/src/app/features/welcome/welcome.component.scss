@@ -1,0 +1,15 @@
+.section-container {
+  text-align: center;
+  font: var(--mat-sys-display-large);
+  padding-top: 30vh;
+  box-sizing: border-box;
+}
+
+.section-container .name {
+  color: var(--mat-sys-primary);
+}
+
+.section-container .button {
+  margin-top: 6vh;
+  zoom: 1.5;
+}

@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './components/about/about.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '/about' } // Redirect to about for any unknown routes
+  {
+    path: '',
+    component: AppComponent
+  },
+  // Add other specific routes here
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];

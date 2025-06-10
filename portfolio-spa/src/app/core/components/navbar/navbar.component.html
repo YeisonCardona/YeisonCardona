@@ -1,0 +1,17 @@
+<div class="section-navbar break-page-container">
+  <div class="page-container">
+
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel" mat-stretch-tabs="false" mat-align-tabs="end">
+      @for (link of navLinks; track link) {
+        <a mat-tab-link
+           (click)="activeLink = link.path; scrollToElement(link.path)"
+           [routerLink]="'#' + link.path"
+        >{{ link.label }}</a>
+      }
+    </nav>
+
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+  </div>
+</div>
+
