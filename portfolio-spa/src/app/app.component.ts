@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.themeService.applyMaterialThemeFromColor("#ff4d5a");
+    this.themeService.applyMaterialThemeFromColor("#769CDF", "html", true);
 
   }
 
