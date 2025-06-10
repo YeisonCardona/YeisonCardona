@@ -13,3 +13,15 @@
   margin-top: 6vh;
   zoom: 1.5;
 }
+
+@media screen and (max-width: 768px) {
+  .section-container {
+    font: var(--mat-sys-display-small);
+    padding-top: 20vh;
+  }
+
+  .section-container .button {
+    margin-top: 4vh;
+    zoom: 1.2;
+  }
+}

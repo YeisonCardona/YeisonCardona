@@ -1,12 +1,11 @@
-<div class="section-container" id="about">
+<div class="section-container section-container--{{breakpoint}}" id="about">
 
   <h1 class="section-title">About</h1>
 
-  <mat-grid-list cols="10" rowHeight="1:0.6">
+  <mat-grid-list [cols]="cols" rowHeight="1:0.6">
 
-    <mat-grid-tile colspan="5" rowspan="6" class="about-text">
+    <mat-grid-tile [colspan]="colspan" [rowspan]="rowspan" class="about-text">
       <p>
-<!--        I’m a Senior Python Backend Developer with a Full Stack mindset and over 10 years of experience designing, building, and deploying robust web applications. My expertise lies in building scalable APIs, optimizing backend performance, and integrating modern DevOps workflows using Docker, CI/CD, and cloud platforms. I approach software development with a strong focus on clean architecture, maintainability, and collaboration. Whether leading backend architecture or contributing across the stack, I enjoy solving complex problems through elegant and efficient code.-->
         <b class="accent">Fully committed</b> to building scalable, efficient, and elegant solutions,
         I’m a <b class="accent">senior backend developer</b> with a strong Python core and a full stack mindset.
         I’m passionate about designing <b class="accent">robust APIs</b>, working with modern architectures,

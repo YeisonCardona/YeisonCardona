@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-about',
@@ -12,7 +15,48 @@ import {MatGridListModule} from '@angular/material/grid-list';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+  colspan = 5;
+  rowspan = 6;
+  cols = 10;
+  breakpoint='Default'
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.breakpointObserver
+      .observe([
+        Breakpoints.XSmall,    // (max-width: 599.98px)
+        Breakpoints.Small,     // (min-width: 600px) and (max-width: 959.98px)
+        Breakpoints.Medium,    // (min-width: 960px) and (max-width: 1279.98px)
+        Breakpoints.Large,     // (min-width: 1280px) and (max-width: 1919.98px)
+        Breakpoints.XLarge     // (min-width: 1920px)
+      ])
+      .pipe(
+        map(result => {
+          if (result.breakpoints[Breakpoints.XSmall]) {
+            return { cols: 8, colspan: 8, rowspan: 10, breakpoint:'XSmall' };
+          }
+          if (result.breakpoints[Breakpoints.Small]) {
+            return { cols: 9, colspan: 9, rowspan: 8, breakpoint:'Small' };
+          }
+          if (result.breakpoints[Breakpoints.Medium]) {
+            return { cols: 10, colspan: 10, rowspan: 4, breakpoint:'Medium' };
+          }
+          // Por defecto (Large y XLarge)
+          return { cols: 10, colspan: 5, rowspan: 6, breakpoint:'Default' };
+        })
+      )
+      .subscribe(({ colspan, rowspan, cols, breakpoint }) => {
+        this.colspan = colspan;
+        this.rowspan = rowspan;
+        this.cols = cols;
+        this.breakpoint = breakpoint
+      });
+  }
+
+
+
 
   private shuffleArray<T>(array: T[]): T[] {
     for (let i = array.length - 1; i > 0; i--) {

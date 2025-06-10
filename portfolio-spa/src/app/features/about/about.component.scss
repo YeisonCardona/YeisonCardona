@@ -6,25 +6,52 @@
 }
 
 .section-container .about-text p {
-  padding-left: 50px;
+  padding: 3vw;
   text-align: left;
 }
 
 .section-container mat-grid-tile.tool-icon{
-  font-size: 80px;
+  //font-size: 80px;
   overflow: visible;
   transition: transform 300ms ease;
 }
 
-.section-container mat-grid-tile.tool-icon.tool-icon--size2 {
-  font-size: 160px;
-}
-
-.section-container mat-grid-tile.tool-icon.tool-icon--vsize08 {
-  font-size: 64px;
-}
+//.section-container mat-grid-tile.tool-icon.tool-icon--size2 {
+//  font-size: 160px;
+//}
+//
+//.section-container mat-grid-tile.tool-icon.tool-icon--vsize08 {
+//  font-size: 64px;
+//}
 
 .section-container mat-grid-tile.tool-icon:hover {
   transform: scale(1.2);
 }
 
+@mixin tool-icon-sizes($font-size) {
+  font-size: $font-size;
+
+  &.tool-icon--size2 {
+    font-size: $font-size * 2;
+  }
+
+  &.tool-icon--vsize08 {
+    font-size: $font-size * 0.8;
+  }
+}
+
+.section-container--Default mat-grid-tile.tool-icon {
+  @include tool-icon-sizes(80px);
+}
+
+.section-container--Medium mat-grid-tile.tool-icon {
+  @include tool-icon-sizes(60px);
+}
+
+.section-container--Small mat-grid-tile.tool-icon {
+  @include tool-icon-sizes(40px);
+}
+
+.section-container--XSmall mat-grid-tile.tool-icon {
+  @include tool-icon-sizes(40px);
+}
