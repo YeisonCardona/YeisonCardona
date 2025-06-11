@@ -1,3 +1,16 @@
-.contact-container {
-  /* Default styling */
+.contact-item {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.contact-item mat-icon {
+  color: var(--mat-sys-primary);
+  margin-right: 8px;
+}
+
+.contact-item a,
+.contact-item span {
+  font: var(--mat-sys-body-large);
+  color: var(--mat-sys-secondary);
+  font-weight: 500;
 }

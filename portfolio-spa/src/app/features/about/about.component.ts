@@ -35,16 +35,16 @@ export class AboutComponent implements OnInit {
       .pipe(
         map(result => {
           if (result.breakpoints[Breakpoints.XSmall]) {
-            return { cols: 8, colspan: 8, rowspan: 10, breakpoint:'XSmall' };
+            return { cols: 8, colspan: 8, rowspan: 4, breakpoint:'XSmall' };
           }
           if (result.breakpoints[Breakpoints.Small]) {
-            return { cols: 9, colspan: 9, rowspan: 8, breakpoint:'Small' };
+            return { cols: 8, colspan: 5, rowspan: 4, breakpoint:'Small' };
           }
           if (result.breakpoints[Breakpoints.Medium]) {
-            return { cols: 10, colspan: 10, rowspan: 4, breakpoint:'Medium' };
+            return { cols: 10, colspan: 5 , rowspan: 4, breakpoint:'Medium' };
           }
           // Por defecto (Large y XLarge)
-          return { cols: 10, colspan: 5, rowspan: 6, breakpoint:'Default' };
+          return { cols: 10, colspan: 5, rowspan: 4, breakpoint:'Default' };
         })
       )
       .subscribe(({ colspan, rowspan, cols, breakpoint }) => {
@@ -71,21 +71,21 @@ export class AboutComponent implements OnInit {
   }
 
   tools = this.shuffleArray([
-    {
-      icon: "devicon-anaconda-original-wordmark",
-      colored: true,
-      colspan: "2"
-    },
+    // {
+    //   icon: "devicon-anaconda-original-wordmark",
+    //   colored: true,
+    //   colspan: "2"
+    // },
     {
       icon: "devicon-angular-plain-wordmark",
       colored: false,
       colspan: "2"
     },
-    {
-      icon: "devicon-apache-plain-wordmark",
-      colored: true,
-      colspan: "2"
-    },
+    // {
+    //   icon: "devicon-apache-plain-wordmark",
+    //   colored: true,
+    //   colspan: "2"
+    // },
     {
       icon: "devicon-apachekafka-original-wordmark",
       colored: false,
@@ -96,33 +96,33 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "2"
     },
-    {
-      icon: "devicon-arduino-plain-wordmark",
-      colored: true,
-      colspan: "1"
-    },
-    {
-      icon: "devicon-bash-plain",
-      colored: false,
-      colspan: "1",
-      zoom: "08"
-    },
-    {
-      icon: "devicon-bitbucket-original-wordmark",
-      colored: true,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-arduino-plain-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
+    // {
+    //   icon: "devicon-bash-plain",
+    //   colored: false,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
+    // {
+    //   icon: "devicon-bitbucket-original-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-bootstrap-plain-wordmark",
       colored: true,
       colspan: "1",
       zoom: "08"
     },
-    {
-      icon: "devicon-coffeescript-original-wordmark",
-      colored: true,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-coffeescript-original-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-css3-plain-wordmark",
       colored: true,
@@ -153,12 +153,12 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "2"
     },
-    {
-      icon: "devicon-fedora-plain",
-      colored: true,
-      colspan: "1",
-      zoom: "08"
-    },
+    // {
+    //   icon: "devicon-fedora-plain",
+    //   colored: true,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
     {
       icon: "devicon-flask-original-wordmark",
       colored: false,
@@ -170,64 +170,64 @@ export class AboutComponent implements OnInit {
       colspan: "1",
       zoom: "08"
     },
-    {
-      icon: "devicon-git-plain-wordmark",
-      colored: true,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-git-plain-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-html5-plain-wordmark",
       colored: true,
       colspan: "1"
     },
-    {
-      icon: "devicon-inkscape-plain-wordmark",
-      colored: false,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-inkscape-plain-wordmark",
+    //   colored: false,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-javascript-plain",
       colored: true,
       colspan: "1",
       zoom: "08"
     },
-    {
-      icon: "devicon-json-plain",
-      colored: false,
-      colspan: "1",
-      zoom: "08"
-    },
+    // {
+    //   icon: "devicon-json-plain",
+    //   colored: false,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
     {
       icon: "devicon-jupyter-plain-wordmark",
       colored: true,
       colspan: "1"
     },
-    {
-      icon: "devicon-kaggle-original-wordmark",
-      colored: true,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-kaggle-original-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-keras-plain-wordmark",
       colored: true,
       colspan: "2"
     },
-    {
-      icon: "devicon-latex-original",
-      colored: false,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-latex-original",
+    //   colored: false,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-linux-plain",
       colored: false,
       colspan: "1",
       zoom: "08"
     },
-    {
-      icon: "devicon-markdown-original",
-      colored: false,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-markdown-original",
+    //   colored: false,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-matplotlib-plain-wordmark",
       colored: true,
@@ -243,16 +243,16 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "2"
     },
-    {
-      icon: "devicon-opencv-plain-wordmark",
-      colored: true,
-      colspan: "1"
-    },
-    {
-      icon: "devicon-opensuse-original-wordmark",
-      colored: true,
-      colspan: "1"
-    },
+    // {
+    //   icon: "devicon-opencv-plain-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
+    // {
+    //   icon: "devicon-opensuse-original-wordmark",
+    //   colored: true,
+    //   colspan: "1"
+    // },
     {
       icon: "devicon-pandas-plain-wordmark",
       colored: true,
@@ -268,11 +268,11 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "1"
     },
-    {
-      icon: "devicon-pycharm-plain-wordmark",
-      colored: true,
-      colspan: "2"
-    },
+    // {
+    //   icon: "devicon-pycharm-plain-wordmark",
+    //   colored: true,
+    //   colspan: "2"
+    // },
     {
       icon: "devicon-pypi-plain-wordmark",
       colored: true,
@@ -299,11 +299,11 @@ export class AboutComponent implements OnInit {
       colspan: "1",
       zoom: "08"
     },
-    {
-      icon: "devicon-raspberrypi-plain-wordmark",
-      colored: true,
-      colspan: "2"
-    },
+    // {
+    //   icon: "devicon-raspberrypi-plain-wordmark",
+    //   colored: true,
+    //   colspan: "2"
+    // },
     {
       icon: "devicon-readthedocs-original-wordmark",
       colored: false,
@@ -319,12 +319,12 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "1"
     },
-    {
-      icon: "devicon-selenium-original",
-      colored: true,
-      colspan: "1",
-      zoom: "08"
-    },
+    // {
+    //   icon: "devicon-selenium-original",
+    //   colored: true,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
     {
       icon: "devicon-sqlite-plain-wordmark",
       colored: true,
@@ -356,34 +356,34 @@ export class AboutComponent implements OnInit {
       colored: true,
       colspan: "2"
     },
-    {
-      icon: "devicon-vim-plain",
-      colored: true,
-      colspan: "1",
-      zoom: "08"
-    },
-    {
-      icon: "devicon-webstorm-plain-wordmark",
-      colored: true,
-      colspan: "2"
-    },
-    {
-      icon: "devicon-yaml-plain",
-      colored: true,
-      colspan: "1",
-      zoom: "08"
-    },
-    {
-      icon: "devicon-xml-plain",
-      colored: true,
-      colspan: "1"
-    },
-    {
-      icon: "devicon-angularmaterial-plain",
-      colored: false,
-      colspan: "1",
-      zoom: "08"
-    },
+    // {
+    //   icon: "devicon-vim-plain",
+    //   colored: true,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
+    // {
+    //   icon: "devicon-webstorm-plain-wordmark",
+    //   colored: true,
+    //   colspan: "2"
+    // },
+    // {
+    //   icon: "devicon-yaml-plain",
+    //   colored: true,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
+    // {
+    //   icon: "devicon-xml-plain",
+    //   colored: true,
+    //   colspan: "1"
+    // },
+    // {
+    //   icon: "devicon-angularmaterial-plain",
+    //   colored: false,
+    //   colspan: "1",
+    //   zoom: "08"
+    // },
   ]);
 
 }

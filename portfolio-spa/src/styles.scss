@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  padding-bottom: 128px;
 }
 
 html {
@@ -90,6 +91,11 @@ b.accent {
 }
 
 
+.project-description--p {
+  zoom: 1;
+}
+
+
 
 /* XSmall: max-width: 599.98px */
 @media (max-width: 599.98px) {
@@ -97,6 +103,11 @@ b.accent {
   p {
     zoom: 0.9;
   }
+
+  .project-description--p {
+    zoom: 0.9;
+  }
+
 
 }
 
@@ -119,3 +130,4 @@ b.accent {
 @media (min-width: 1920px) {
   /* Styles for extra large screens */
 }
+

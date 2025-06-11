@@ -33,10 +33,10 @@
 }
 
 .section-container--Small mat-grid-tile.tool-icon {
-  @include tool-icon-sizes(40px);
+  @include tool-icon-sizes(48px);
 }
 
 .section-container--XSmall mat-grid-tile.tool-icon {
-  @include tool-icon-sizes(30px);
+  @include tool-icon-sizes(38px);
 
 }
