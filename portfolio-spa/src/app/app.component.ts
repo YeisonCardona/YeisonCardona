@@ -2,7 +2,6 @@ import {Component, Inject, OnInit} from '@angular/core';
 import { AboutComponent } from './features/about/about.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { ProjectsComponent } from './features/projects/projects.component';
-import { SkillsComponent } from './features/skills/skills.component';
 import { WelcomeComponent } from './features/welcome/welcome.component';
 
 import { ThemeService } from './core/services/theme/theme.service';
@@ -18,7 +17,6 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    SkillsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

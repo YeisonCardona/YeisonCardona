@@ -1,3 +1,22 @@
-<div class="projects-container">
-  <!-- Default content -->
+<div class="section-container" id="projects">
+
+  <h1 class="section-title">Projects</h1>
+
+  <p>
+    Here you’ll find a selection of projects that showcase my experience in <b class="accent">backend development,
+    API design, and full stack solutions</b>. Each one reflects my focus on <b class="accent">clean architecture, scalability,
+    and problem-solving through code</b>.
+  </p>
+
+    <div class="project-card">
+      @for (project of projectList; track project) {
+        <app-project [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
+        <app-project [project]="project"></app-project>
+      }
+    </div>
+
 </div>

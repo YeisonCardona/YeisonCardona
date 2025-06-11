@@ -1,3 +1,19 @@
-.projects-container {
-  /* Default styling */
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.project-card app-project {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+@media (max-width: 959.98px) {
+  .project-card app-project {
+    width: 100%;
+  }
+
 }

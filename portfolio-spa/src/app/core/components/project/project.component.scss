@@ -1,0 +1,22 @@
+.project-header-image {
+  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+mat-card-actions i {
+  font-size: 32px;
+  padding: 0 4px;
+}
+
+p {
+  padding: 0;
+}
+
+img {
+  margin-top: 8px;
+}
+
+.mat-mdc-card-outlined {
+  background-color: var(--mat-sys-surface-container);
+}
+

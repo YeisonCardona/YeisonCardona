@@ -44,7 +44,7 @@ export class NavbarComponent {
   scrollToElement(elementId: string): void {
     const element = this.document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({behavior: 'smooth', block: "start"});
     }
   }
 
@@ -66,9 +66,8 @@ export class NavbarComponent {
   navLinks = [
     { path: 'welcome', label: 'Home' },
     { path: 'about', label: 'About' },
-    // { path: 'skills', label: 'Skills' },
-    // { path: 'projects', label: 'Projects' },
-    // { path: 'contact', label: 'Contact' }
+    { path: 'projects', label: 'Projects' },
+    { path: 'contact', label: 'Contact' }
   ];
 
 

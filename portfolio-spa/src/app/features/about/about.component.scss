@@ -1,28 +1,12 @@
 .section-container {
 }
 
-.section-container .about-text {
-
-}
-
-.section-container .about-text p {
-  padding: 3vw;
-  text-align: left;
-}
 
 .section-container mat-grid-tile.tool-icon{
   //font-size: 80px;
   overflow: visible;
   transition: transform 300ms ease;
 }
-
-//.section-container mat-grid-tile.tool-icon.tool-icon--size2 {
-//  font-size: 160px;
-//}
-//
-//.section-container mat-grid-tile.tool-icon.tool-icon--vsize08 {
-//  font-size: 64px;
-//}
 
 .section-container mat-grid-tile.tool-icon:hover {
   transform: scale(1.2);
@@ -55,11 +39,4 @@
 .section-container--XSmall mat-grid-tile.tool-icon {
   @include tool-icon-sizes(30px);
 
-}
-
-
-
-.section-container--XSmall p {
-  font: var(--mat-sys-body-large);
-  zoom: 0.9;
 }

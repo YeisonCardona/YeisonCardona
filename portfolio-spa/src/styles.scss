@@ -43,20 +43,15 @@ html {
 .page-container {
   max-width: 1440px;
   margin: 0 auto;
-  //padding: 6vw; /* Added top padding to account for the navbar */
 }
 
 .section-container {
-  height: calc(100vh - 48px);
   width: 100%;
-  padding-top: 48px;
  }
 
-
-.section-container#welcome {
-  min-height: 100vh;
+.section-title {
+  padding-top: 5vh;
 }
-
 
 
 .break-page-container {
@@ -71,7 +66,13 @@ html {
 p {
   font: var(--mat-sys-body-large);
   zoom: 1.25;
+  padding: 3vw;
+  text-align: left;
 }
+
+
+
+
 
 .section-title {
   font: var(--mat-sys-display-medium);
@@ -86,4 +87,35 @@ p {
 b.accent {
   color: var(--mat-sys-primary);
   font-weight: 500;
+}
+
+
+
+/* XSmall: max-width: 599.98px */
+@media (max-width: 599.98px) {
+  /* Styles for extra small screens */
+  p {
+    zoom: 0.9;
+  }
+
+}
+
+/* Small: 600px - 959.98px */
+@media (min-width: 600px) and (max-width: 959.98px) {
+  /* Styles for small screens */
+}
+
+/* Medium: 960px - 1279.98px */
+@media (min-width: 960px) and (max-width: 1279.98px) {
+  /* Styles for medium screens */
+}
+
+/* Large: 1280px - 1919.98px */
+@media (min-width: 1280px) and (max-width: 1919.98px) {
+  /* Styles for large screens */
+}
+
+/* XLarge: min-width: 1920px */
+@media (min-width: 1920px) {
+  /* Styles for extra large screens */
 }

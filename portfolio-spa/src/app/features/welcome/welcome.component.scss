@@ -3,6 +3,7 @@
   font: var(--mat-sys-display-large);
   padding-top: 30vh;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 .section-container .name {
@@ -10,15 +11,41 @@
 }
 
 .section-container .button {
-  margin-top: 6vh;
+  margin: 0 1vh;
+  //margin-bottom: 1.5vh;
   zoom: 1.5;
 }
 
-@media screen and (max-width: 768px) {
+.buttons {
+  margin: 6vh 1vh;
+
+}
+
+.links {
+  font-size: 32px;
+  margin: 0 10px;
+  color: var(--mat-sys-primary);
+}
+
+@media screen and (max-width: 599.98px) {
   .section-container {
-    font: var(--mat-sys-display-small);
     padding-top: 20vh;
-    zoom: 0.8;
+    font-size: 100%;
+    line-height: 150%;
+  }
+
+  .section-container .button {
+    margin-top: 4vh;
+    zoom: 1.2;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 959.98px) {
+  .section-container {
+    padding-top: 20vh;
+    font-size: 180%;
+    line-height: 150%;
   }
 
   .section-container .button {
