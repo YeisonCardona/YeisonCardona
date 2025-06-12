@@ -1,7 +1,4 @@
-.project-header-image {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
+
 
 mat-card-actions i {
   font-size: 32px;
@@ -31,4 +28,21 @@ mat-card-subtitle {
 mat-card-actions.technologies {
   margin-top: 8px;
   margin-left: 4px;
+}
+.mat-mdc-card-avatar {
+  border-radius: 0;
+}
+
+.project-header-image {
+  background-size: cover;
+  background-position: center;
+}
+
+mat-card-content.main-img{
+  height: 100px;
+  background-size: cover;
+  height: 30vh;
+  background-position: center;
+  margin: 15px;
+  border-radius: 10px;
 }

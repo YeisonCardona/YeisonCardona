@@ -7,7 +7,11 @@
     <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
   </mat-card-header>
 
-  <img mat-card-image src="{{ project.imageUrl }}" alt="">
+  @if (project.imageUrl) {
+    <mat-card-content class="main-img"
+      [style.background-image]="'url(' + project.imageUrl + ')'">
+    </mat-card-content>
+  }
 
   <mat-card-content>
     <p class="project-description--p">
