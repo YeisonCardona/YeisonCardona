@@ -15,7 +15,7 @@
     </p>
   </mat-card-content>
 
-  <mat-card-actions>
+  <mat-card-actions class="technologies">
     @for (tech of project.technologies; track tech) {
       <i class="{{ tech }}"></i>
     }
@@ -24,8 +24,20 @@
   <mat-card-actions align="end">
     <a mat-button [href]="project.githubUrl" target="_blank">
       <mat-icon>open_in_new</mat-icon>
-      View on GitHub
+      GitHub
     </a>
+    @if (project.pypiUrl) {
+      <a mat-button [href]="project.pypiUrl" target="_blank">
+        <mat-icon>open_in_new</mat-icon>
+        PyPi
+      </a>
+    }
+    @if (project.docsURL) {
+      <a mat-button [href]="project.docsURL" target="_blank">
+        <mat-icon>open_in_new</mat-icon>
+        Docs
+      </a>
+    }
   </mat-card-actions>
 
 </mat-card>

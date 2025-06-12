@@ -29,7 +29,9 @@ export class ProjectsComponent {
         "devicon-scikitlearn-plain",
         "devicon-docker-plain",
       ],
-      githubUrl: "https://github.com/UN-GCPDS/bci-framework",
+      githubUrl: "https://github.com/dunderlab/bci-framework",
+      pypiUrl: "https://pypi.org/project/bci-framework/",
+      docsURL: "bci-framework.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -43,6 +45,8 @@ export class ProjectsComponent {
         "devicon-python-plain",
         ],
       githubUrl: "https://github.com/dunderlab/python-chaski",
+      pypiUrl: "https://pypi.org/project/chaski-confluent/",
+      docsURL: "https://chaski-confluent.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -58,6 +62,8 @@ export class ProjectsComponent {
         "devicon-css3-plain",
       ],
       githubUrl: "https://github.com/dunderlab/qt-material.git",
+      pypiUrl: "https://pypi.org/project/qt-material/",
+      docsURL: "https://qt-material.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -78,6 +84,8 @@ export class ProjectsComponent {
         "devicon-swagger-plain",
       ],
       githubUrl: "https://github.com/dunderlab/python-dunderlab.foundation",
+      pypiUrl: "",
+      docsURL: "",
       headerImage: "",
       col: "col-6"
     },
@@ -92,6 +100,8 @@ export class ProjectsComponent {
         "devicon-javascript-plain",
       ],
       githubUrl: "https://github.com/dunderlab/python-radiant_framework",
+      pypiUrl: "https://pypi.org/project/radiant-framework/",
+      docsURL: "https://radiant-framework.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -108,6 +118,8 @@ export class ProjectsComponent {
         "devicon-latex-original",
       ],
       githubUrl: "https://github.com/dunderlab/python-dunderlab.docs",
+      pypiUrl: "https://pypi.org/project/dunderlab-docs/",
+      docsURL: "https://dunderlab-docs.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -124,6 +136,8 @@ export class ProjectsComponent {
         "devicon-flask-original",
       ],
       githubUrl: "https://github.com/dunderlab/python-dunderlab.visualizations",
+      pypiUrl: "",
+      docsURL: "https://dunderlab.readthedocs.io/projects/Visualizations/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -139,6 +153,8 @@ export class ProjectsComponent {
         "devicon-scikitlearn-plain",
       ],
       githubUrl: "https://github.com/UN-GCPDS/openbci-stream",
+      pypiUrl: "https://pypi.org/project/openbci-stream/",
+      docsURL: "https://openbci-stream.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     },
@@ -156,6 +172,8 @@ export class ProjectsComponent {
         "devicon-swagger-plain",
       ],
       githubUrl: "https://github.com/dunderlab/python-django-timescaledbapp",
+      pypiUrl: "https://pypi.org/project/dunderlab-timescaledbapp/",
+      docsURL: "https://timescaledb-app.readthedocs.io/en/latest/",
       headerImage: "",
       col: "col-6"
     }

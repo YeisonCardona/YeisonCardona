@@ -24,6 +24,8 @@ export class ProjectComponent {
     imageUrl: string;
     technologies: string[];
     githubUrl: string;
+    pypiUrl: string,
+    docsURL: string,
     headerImage: string;
   } = {
     title: '',
@@ -32,6 +34,8 @@ export class ProjectComponent {
     imageUrl: '',
     technologies: [],
     githubUrl: '',
+    pypiUrl: '',
+    docsURL: '',
     headerImage: ''
   };
 
