@@ -1,6 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
 import {DOCUMENT} from '@angular/common';
 
 
@@ -10,6 +11,7 @@ import {DOCUMENT} from '@angular/common';
   imports: [
     MatButtonModule,
     MatIconModule,
+    MatTooltipModule
   ],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss'

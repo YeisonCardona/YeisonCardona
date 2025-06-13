@@ -179,7 +179,6 @@ export class ProjectsComponent {
       col: "col-4"
     },
 
-
     {
       title: "Pinguino IDE",
       subtitle: "Open source integrated development environment",
@@ -195,7 +194,6 @@ export class ProjectsComponent {
       pypiUrl: "",
       docsURL: "",
     },
-
 
     {
       title: "Matplotlib-FigureStream",
@@ -214,8 +212,6 @@ export class ProjectsComponent {
       pypiUrl: "https://pypi.org/project/figurestream/",
       docsURL: "https://figurestream.readthedocs.io/en/latest/",
     }
-
-
 
   ]
 
