@@ -135,7 +135,7 @@ export class ProjectsComponent {
       pypiUrl: "https://pypi.org/project/openbci-stream/",
       docsURL: "https://openbci-stream.readthedocs.io/en/latest/",
       headerImage: "/assets/images/projects/openbcistream_header.png",
-      col: "col-6"
+      col: "col-4"
     },
 
     {
@@ -154,7 +154,7 @@ export class ProjectsComponent {
       pypiUrl: "https://pypi.org/project/dunderlab-timescaledbapp/",
       docsURL: "https://timescaledb-app.readthedocs.io/en/latest/",
       headerImage: "/assets/images/projects/timescaledbapp_header.png",
-      col: "col-6"
+      col: "col-4"
     },
 
     {
@@ -176,8 +176,44 @@ export class ProjectsComponent {
       pypiUrl: "",
       docsURL: "",
       headerImage: "/assets/images/projects/foundation_header.png",
-      col: "col-6"
+      col: "col-4"
     },
+
+
+    {
+      title: "Pinguino IDE",
+      subtitle: "Open source integrated development environment",
+      description: "Pinguino IDE is an integrated environment for developing firmware for PIC microcontrollers. Built in Python with a Qt-based interface, it offers tools to edit, compile, and upload programs to Pinguino boards.",
+      imageUrl: "",
+      technologies: [
+        "devicon-python-plain",
+        "devicon-qt-original",
+      ],
+      githubUrl: "https://github.com/PinguinoIDE/pinguino-ide",
+      headerImage:  "/assets/images/projects/pinguinoide_header.png",
+      col: "col-6",
+      pypiUrl: "",
+      docsURL: "",
+    },
+
+
+    {
+      title: "Matplotlib-FigureStream",
+      subtitle: "A backend for serve Matplotlib animations as web streams.",
+      description: "Matplotlib-FigureStream extends Matplotlib to broadcast live plots through a Flask server. Frames are sent as JPEG streams for real‑time browser visualization. Ideal for embedding animated graphs in web applications.",
+      imageUrl: "",
+      technologies: [
+        "devicon-python-plain",
+        "devicon-matplotlib-plain",
+        "devicon-numpy-plain",
+        "devicon-flask-original",
+      ],
+      githubUrl: "https://github.com/dunderlab/python-matplotlib-figurestream",
+      headerImage: "/assets/images/projects/figurestream_header.png",
+      col: "col-6",
+      pypiUrl: "https://pypi.org/project/figurestream/",
+      docsURL: "https://figurestream.readthedocs.io/en/latest/",
+    }
 
 
 
