@@ -1,9 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { AboutComponent } from './features/about/about.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 import { WelcomeComponent } from './features/welcome/welcome.component';
-
+import { InterestsComponent } from './features/interests/interests.component';
 import { ThemeService } from './core/services/theme/theme.service';
 import { FontsComponent } from './core/fonts/fonts.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
@@ -15,6 +15,7 @@ import { NavbarComponent } from './core/components/navbar/navbar.component';
     NavbarComponent,
     WelcomeComponent,
     AboutComponent,
+    InterestsComponent,
     ProjectsComponent,
     ContactComponent,
   ],

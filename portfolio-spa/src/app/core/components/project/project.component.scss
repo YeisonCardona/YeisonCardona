@@ -1,4 +1,7 @@
-
+mat-card {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 
 mat-card-actions i {
   font-size: 32px;
@@ -39,7 +42,7 @@ mat-card-actions.technologies {
 }
 
 mat-card-content.main-img{
-  height: 100px;
+  //height: 100px;
   background-size: cover;
   height: 30vh;
   background-position: center;

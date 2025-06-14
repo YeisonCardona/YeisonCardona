@@ -1,0 +1,15 @@
+mat-card {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+mat-card mat-card-content ul li {
+  font: var(--mat-sys-body-large);
+}
+
+
+@media (max-width: 959.98px) {
+  .interest-card div  {
+    width: 100%;
+  }
+}
