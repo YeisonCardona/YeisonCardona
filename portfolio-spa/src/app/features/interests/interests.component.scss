@@ -1,6 +1,7 @@
 mat-card {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  background-color: var(--mat-sys-surface-container);
 }
 
 mat-card mat-card-content ul li {
@@ -13,3 +14,4 @@ mat-card mat-card-content ul li {
     width: 100%;
   }
 }
+
