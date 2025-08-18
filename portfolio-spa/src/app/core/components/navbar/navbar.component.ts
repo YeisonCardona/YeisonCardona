@@ -60,7 +60,6 @@ export class NavbarComponent {
     const elementClicked = this.document.getElementById("mode-" + (mode === 'dark' ? 'light' : mode === 'light' ? 'dark' : mode));
     if (elementClicked) elementClicked.style.setProperty('display', 'block');
     console.log(elementClicked);
-
   }
 
   navLinks = [

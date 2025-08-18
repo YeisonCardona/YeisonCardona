@@ -26,10 +26,12 @@
   </mat-card-actions>
 
   <mat-card-actions align="end">
-    <a mat-button [href]="project.githubUrl" target="_blank">
-      <mat-icon>open_in_new</mat-icon>
-      GitHub
-    </a>
+    @if (project.pypiUrl) {
+      <a mat-button [href]="project.githubUrl" target="_blank">
+        <mat-icon>open_in_new</mat-icon>
+        GitHub
+      </a>
+    }
     @if (project.pypiUrl) {
       <a mat-button [href]="project.pypiUrl" target="_blank">
         <mat-icon>open_in_new</mat-icon>

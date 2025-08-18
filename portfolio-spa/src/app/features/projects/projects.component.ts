@@ -18,6 +18,20 @@ export class ProjectsComponent {
   projectList = [
 
     {
+      title: "CtenoLab",
+      subtitle: "Real-Time Neurocognitive Experiments in the Browser",
+      description: "CtenoLab enables EEG and BCI paradigms directly in the browser with precise hardware synchronization, combining WebUSB/WebSerial integration and real-time control for flexible neurophysiological research.",
+      technologies: [
+        "devicon-angularjs-plain",
+      ],
+      githubUrl: "",
+      pypiUrl: "",
+      docsURL: "",
+      headerImage: "/assets/images/projects/cteno.png",
+      imageUrl: "/assets/images/projects/cteno.gif",
+      col: "col-12"
+    },
+    {
       title: "BCI-Framework",
       subtitle: "Distributed processing tool for stimuli delivery, experiment design and real-time visualizations with OpenBCI.",
       description: "Open-source platform for EEG/EMG/ECG acquisition built around OpenBCI hardware. It streams data in real time, offers distributed processing and a PySide-based interface to visualize signals and deliver stimuli. Users can design custom neurophysiological experiments and analyze biosignals through its integrated tools.",
