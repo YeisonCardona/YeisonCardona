@@ -9,7 +9,7 @@
 
 ### 🧠 About Me
 
-I’m a multidisciplinary engineer with 15+ years of Python experience, currently a **PhD candidate** and adjunct professor at **Universidad Nacional de Colombia** (*Digital Signal Processing*).  
+I’m a multidisciplinary engineer with 10+ years of Python experience, currently a **PhD candidate** and adjunct professor at **Universidad Nacional de Colombia** (*Digital Signal Processing*).  
 
 I specialize in **backend engineering, DevOps, and brain-computer interfaces (BCI)**, bridging **hardware and software** for real-time, scalable systems. My work spans:
 
