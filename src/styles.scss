@@ -1,0 +1,131 @@
+@use '@angular/material' as mat;
+@use 'app/shared/components/material/material.component';
+@use 'app/shared/components/material/responsive-grid';
+@use 'app/shared/components/material/responsive-fontsizes';
+@use 'app/shared/components/material/responsive-container';
+@import 'devicon/devicon.min.css';
+
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url('./assets/fonts/Material_Symbols/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'HeptaSlab';
+  src: url('./assets/fonts/Hepta_Slab/HeptaSlab-VariableFont_wght.ttf') format('truetype');
+  font-weight: 350;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  src: url('./assets/fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+}
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: mat.$violet-palette,
+      typography: (
+        plain-family: 'Raleway',
+        brand-family: 'HeptaSlab',
+        bold-weight: 900,
+        medium-weight: 600,
+        regular-weight: 300,
+      ),
+      density: (
+        scale: 0,
+      ),
+      use-system-variables: true,
+    )
+  );
+}
+
+:root {
+  --sidenav-width: 0;
+  --sidenav-width-fixed: 0;
+
+  --sidenav-collapsed-width: 0px;
+  --sidenav-collapsed-width-fixed: 0px;
+
+  --toolbar-height: calc(40px + 0.8rem + 1px);
+  --breadcrumb-height: calc(40px + 0.8rem + 1px);
+
+  --sidenav-background-color: transparent;
+  //--sidenav-background-color: var(--mat-sys-secondary-container);
+  --toolbar-background-color: var(--mat-sys-surface-container-high);
+  //--main-container-background-color: var(--mat-sys-surface-container-lowest);
+
+  --footer-margin-top: 150px;
+  //--footer-background-color: var(--mat-sys-surface-container-high);
+  --footer-padding: 5vw;
+
+  --scrollbar-width: 0.75rem;
+  --golden-ratio: 1.618;
+
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+  --safe-right: env(safe-area-inset-right);
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a[matButton],
+button {
+  text-wrap-mode: nowrap;
+}
+
+a[matButton].wrap-ok,
+button.wrap-ok {
+  text-wrap-mode: unset;
+}
+
+.primary {
+  color: var(--mat-sys-primary);
+}
+
+.devicon {
+  font-size: 32px;
+}

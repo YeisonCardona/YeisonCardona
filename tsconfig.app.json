@@ -1,0 +1,24 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [],
+    "paths": {
+      "@shared/*": ["./src/app/shared/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/app/shared/components/visualizations",
+    "src/**/*plotly*",
+    "src/app/shared/services/backend",
+    "src/app/shared/services/supabase",
+    "src/app/shared/services/hardware",
+    "src/app/shared/services/purchases",
+    "src/app/shared/services/paypal",
+    "src/app/shared/services/api/*",
+    "src/app/shared/interceptors/persistent-cache.interceptor.ts"
+  ]
+}
