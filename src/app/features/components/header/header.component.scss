@@ -1,0 +1,49 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.button-overrides(
+    (
+      filled-label-text-size: 120%,
+      outlined-label-text-size: 120%,
+      text-label-text-size: 120%,
+      tonal-label-text-size: 120%,
+
+      filled-container-height: calc(40px * 1.2),
+      outlined-container-height: calc(40px * 1.2),
+      text-container-height: calc(40px * 1.2),
+      tonal-container-height: calc(40px * 1.2),
+      filled-horizontal-padding: calc(24px * 1.2),
+      outlined-horizontal-padding: calc(24px * 1.2),
+      text-horizontal-padding: calc(24px * 1.2),
+      tonal-horizontal-padding: calc(24px * 1.2),
+    )
+  );
+}
+
+.header {
+  font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
+  line-height: calc(clamp(0.5rem, 4vw + 1rem, 4rem) + 0.6rem);
+  //font-weight: 200 !important;
+}
+
+.header-links {
+  position: absolute;
+  bottom: 10vh;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: unset;
+  padding: 0.5rem 2rem;
+  border-radius: 100px;
+}
+
+.header-links a:hover {
+  background-color: var(--mat-sys-secondary-container);
+}
+
+.open-to-work {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
