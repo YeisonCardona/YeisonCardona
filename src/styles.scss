@@ -122,6 +122,16 @@ button.wrap-ok {
   text-wrap-mode: unset;
 }
 
+p {
+  font-size: 1.12rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.04rem;
+}
+
+p strong {
+  color: var(--mat-sys-primary);
+  font-weight: 500;
+}
 .primary {
   color: var(--mat-sys-primary);
 }

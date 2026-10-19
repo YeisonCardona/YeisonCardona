@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.icon-button-overrides(
+    (
+      icon-size: calc(24px * 2),
+      touch-target-size: calc(48px * 2),
+      state-layer-size: calc(40px * 1.7),
+      icon-color: var(--mat-sys-primary),
+    )
+  );
+}
+
+mat-icon {
+  font-size: calc(24px * 2);
+  height: calc(24px * 2);
+  width: calc(24px * 2);
+  overflow: visible;
+}

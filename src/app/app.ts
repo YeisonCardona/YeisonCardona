@@ -15,6 +15,10 @@ import { AboutComponent } from './features/components/about/about.component';
 import { InterestComponent } from './features/components/interest/interest.component';
 import { ProjectsComponent } from './features/components/projects/projects.component';
 import { ContactComponent } from './features/components/contact/contact.component';
+import { ThemeSwitcherComponent } from '@shared/services/theme/switcher/switcher.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { IconButtonComponent } from './core/components/icon-button/icon-button.component';
 
 @Component({
   imports: [
@@ -24,6 +28,10 @@ import { ContactComponent } from './features/components/contact/contact.componen
     InterestComponent,
     ProjectsComponent,
     ContactComponent,
+    ThemeSwitcherComponent,
+    MatIconModule,
+    MatButtonModule,
+    IconButtonComponent,
   ],
   selector: 'app-root',
   styleUrl: './app.scss',
@@ -46,6 +54,7 @@ export class App {
   @ViewChildren('container') containerElements!: QueryList<ElementRef<HTMLDivElement>>;
 
   private isAutoScrolling = false;
+  currentIndex = 0;
 
   @HostListener('window:scrollend', ['$event'])
   public onScrollEnd(event: Event): void {
@@ -54,9 +63,10 @@ export class App {
     }
 
     let closestElement: HTMLElement | null = null;
+    let closestIndex = 0;
     let minDistance = Infinity;
 
-    this.containerElements.forEach((containerRef) => {
+    this.containerElements.forEach((containerRef, index) => {
       const nativeElement = containerRef?.nativeElement;
       if (!nativeElement) {
         return;
@@ -68,20 +78,83 @@ export class App {
       if (distance < minDistance) {
         minDistance = distance;
         closestElement = nativeElement;
+        closestIndex = index;
       }
     });
 
-    if (closestElement) {
+    if (closestElement && minDistance < 300) {
       this.isAutoScrolling = true;
 
-      (closestElement as HTMLElement).scrollIntoView({
+      this.currentIndex = closestIndex;
+
+      setTimeout(() => {
+        (closestElement as HTMLElement).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 0);
+
+      setTimeout(() => {
+        this.isAutoScrolling = false;
+      }, 0 + 400);
+    }
+  }
+
+  public nextPage(): void {
+    if (!this.containerElements || this.containerElements.length === 0) {
+      return;
+    }
+
+    // Increment index, but don't exceed the total number of containers
+    if (this.currentIndex < this.containerElements.length - 1) {
+      this.currentIndex++;
+    }
+
+    // Get the target element using the updated index
+    const targetRef = this.containerElements.toArray()[this.currentIndex];
+    const nativeElement = targetRef?.nativeElement;
+
+    if (nativeElement) {
+      this.isAutoScrolling = true;
+
+      nativeElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
       });
 
+      // Release the auto-scroll lock after the animation completes
       setTimeout(() => {
         this.isAutoScrolling = false;
-      }, 600);
+      }, 400);
+    }
+  }
+
+  public prevPage(): void {
+    if (!this.containerElements || this.containerElements.length === 0) {
+      return;
+    }
+
+    // Decrement index, but don't go below 0
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
+
+    // Get the target element using the updated index
+    const targetRef = this.containerElements.toArray()[this.currentIndex];
+    const nativeElement = targetRef?.nativeElement;
+
+    if (nativeElement) {
+      this.isAutoScrolling = true;
+
+      nativeElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+
+      // Release the auto-scroll lock after the animation completes
+      setTimeout(() => {
+        this.isAutoScrolling = false;
+      }, 400);
     }
   }
 }

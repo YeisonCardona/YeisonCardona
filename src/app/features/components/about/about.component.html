@@ -1,1 +1,33 @@
-<app-page title="About"></app-page>
+<app-page title="About">
+  <p class="text-align-justify">
+    I am a <strong>Senior Full-Stack Engineer</strong> with
+    <strong>over 10 years of experience</strong> specializing in building
+    <strong>scalable backend architectures</strong>, distributed systems, and production-ready web
+    applications. With a strong foundation in electronic systems, I bring a
+    <strong>rigorous, engineering-first mindset</strong> to the entire product lifecycle, seamlessly
+    connecting high-performance backend ecosystems built with <strong>Python</strong> and
+    <strong>FastAPI</strong> to modern, reactive user interfaces in <strong>TypeScript</strong> and
+    <strong>Angular</strong>. I thrive in <strong>high-autonomy environments</strong>, focusing on
+    deep analytical problem-solving to turn complex requirements into
+    <strong>reliable, maintainable software solutions</strong>.
+  </p>
+
+  <div class="mat-font-headline-sm margin-top-extra-large title primary">Skills</div>
+
+  <div class="grid-responsive-2">
+    @for (group of skills; track group.category) {
+      <div class="skill-category">
+        <h1 class="mat-font-title-lg">{{ group.category }}</h1>
+        <div class="chips-container">
+          @for (item of group.items; track item) {
+            <mat-chip [class.highlighted-chip]="item.startsWith('*')">
+              <span class="normal small">
+                {{ item.startsWith('*') ? item.slice(1).trim() : item }}
+              </span>
+            </mat-chip>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</app-page>

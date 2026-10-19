@@ -20,6 +20,12 @@
   );
 }
 
+button mat-icon {
+  font-size: calc(24px * 1.2);
+  width: calc(24px * 1.2);
+  height: calc(24px * 1.2);
+}
+
 .header {
   font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
   line-height: calc(clamp(0.5rem, 4vw + 1rem, 4rem) + 0.6rem);
@@ -40,10 +46,4 @@
 
 .header-links a:hover {
   background-color: var(--mat-sys-secondary-container);
-}
-
-.open-to-work {
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
 }

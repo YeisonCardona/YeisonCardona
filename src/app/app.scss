@@ -1,0 +1,21 @@
+app-theme-switcher {
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+
+.open-to-work {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+.page-buttons {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.page-background:nth-child(even) {
+  background-color: var(--mat-sys-surface-bright);
+}

@@ -1,5 +1,20 @@
-<div #container><app-header></app-header></div>
-<div #container><app-about></app-about></div>
-<div #container><app-interest></app-interest></div>
-<div #container><app-projects></app-projects></div>
-<div #container><app-contact></app-contact></div>
+<app-theme-switcher></app-theme-switcher>
+<span class="mat-font-title-lg open-to-work primary">#OpenToWork</span>
+
+<div #container class="page-background"><app-header></app-header></div>
+<div #container class="page-background"><app-about></app-about></div>
+<div #container class="page-background"><app-interest></app-interest></div>
+<div #container class="page-background"><app-projects></app-projects></div>
+<div #container class="page-background"><app-contact></app-contact></div>
+
+<div class="page-buttons">
+  <div (click)="prevPage()">
+    <app-icon-button [disabled]="currentIndex === 0" icon="expand_circle_up"></app-icon-button>
+  </div>
+  <div (click)="nextPage()">
+    <app-icon-button
+      [disabled]="containerElements && currentIndex === containerElements.length - 1"
+      icon="expand_circle_down"
+    ></app-icon-button>
+  </div>
+</div>
