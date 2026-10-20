@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageComponent } from '../../../core/components/page/page.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ViewportService } from '@shared/services/viewport/viewport.service';
 
 @Component({
   selector: 'app-header',
@@ -13,4 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HeaderComponent {
   @Output() nextPage = new EventEmitter<string>();
+
+  constructor(public viewportService: ViewportService) {}
+
+  protected readonly visualViewport = visualViewport;
 }
