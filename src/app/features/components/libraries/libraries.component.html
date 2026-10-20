@@ -9,7 +9,7 @@
 
   <mat-card appearance="raised">
     <div class="grid-responsive-auto-500 no-gap">
-      <div class="margin-top-medium margin-left-medium margin-bottom-medium">
+      <div class="margin-medium">
         <mat-accordion>
           @for (project of libraryList; track $index) {
             <mat-expansion-panel [expanded]="$index === 0" (opened)="onPanelOpened($index)">
