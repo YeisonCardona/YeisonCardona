@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="191.06697mm"
+   height="191.06697mm"
+   viewBox="0 0 191.06697 191.06697"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="favicon.png"
+   inkscape:export-xdpi="68.059998"
+   inkscape:export-ydpi="68.059998"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.20064236"
+     inkscape:cx="642.93501"
+     inkscape:cy="87.219866"
+     inkscape:window-width="1088"
+     inkscape:window-height="1376"
+     inkscape:window-x="3434"
+     inkscape:window-y="31"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.4665146,-52.966515)">
+    <rect
+       style="fill:#666666;stroke-width:0.078;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0.419608;paint-order:markers stroke fill"
+       id="rect1"
+       width="191.06697"
+       height="191.06697"
+       x="9.4665146"
+       y="52.966515"
+       ry="43.515244" />
+    <text
+       xml:space="preserve"
+       style="font-size:143.697px;line-height:0.9;font-family:Times;-inkscape-font-specification:Times;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.0794294;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0.419608;paint-order:markers stroke fill"
+       x="106.3652"
+       y="198.36288"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="106.3652"
+         y="198.36288"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;fill:#ffffff;stroke-width:0.0794294">YC</tspan></text>
+  </g>
+</svg>
