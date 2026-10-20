@@ -139,3 +139,9 @@ p strong {
 .devicon {
   font-size: 32px;
 }
+
+html,
+body {
+  width: 100vw !important;
+  overflow-x: hidden;
+}

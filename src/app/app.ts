@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { IconButtonComponent } from './core/components/icon-button/icon-button.component';
 import { ColorGeneratorService } from './core/services/color-generator/color-generator.service';
+import { ViewportService } from '@shared/services/viewport/viewport.service';
 
 @Component({
   imports: [
@@ -45,6 +46,7 @@ export class App {
   constructor(
     private iconRegistry: MatIconRegistry,
     private themeService: ThemeService,
+    public viewportService: ViewportService,
     colorGeneratorService: ColorGeneratorService,
   ) {
     this.iconRegistry.setDefaultFontSetClass('material-symbols-rounded');
@@ -65,6 +67,10 @@ export class App {
 
   @HostListener('window:scrollend', ['$event'])
   public onScrollEnd(event: Event): void {
+    if (this.viewportService.isMediumDown()) {
+      return;
+    }
+
     if (this.isAutoScrolling || !this.containerElements || this.containerElements.length === 0) {
       return;
     }
