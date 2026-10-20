@@ -23,7 +23,7 @@ jobs:
 
           echo "${{ secrets.NGBASE_DEPLOY_KEY }}" > ~/.ssh/ng_base_key
 
-          chmod 600 ~/.ssh/cteno_key ~/.ssh/ng_base_key
+          chmod 600 ~/.ssh/ng_base_key
 
           Host github-ngbase
             HostName github.com
