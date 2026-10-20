@@ -16,11 +16,31 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+
+          echo "${{ secrets.NGBASE_DEPLOY_KEY }}" > ~/.ssh/ng_base_key
+
+          chmod 600 ~/.ssh/cteno_key ~/.ssh/ng_base_key
+
+          Host github-ngbase
+            HostName github.com
+            User git
+            IdentityFile ~/.ssh/ng_base_key
+            IdentitiesOnly yes
+          EOF
+
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: 'npm'
@@ -36,6 +56,7 @@ jobs:
 
       - name: Create CNAME file
         run: echo "yeisoncardona.com" > ./dist/YeisonCardona/browser/CNAME
+
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
