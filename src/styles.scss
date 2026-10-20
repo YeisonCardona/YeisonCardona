@@ -126,10 +126,11 @@ p {
   font-size: 1.12rem;
   line-height: 1.5rem;
   letter-spacing: 0.04rem;
+  //max-width: 65ch;
 }
 
 p strong {
-  color: var(--mat-sys-primary);
+  //color: var(--mat-sys-primary);
   font-weight: 500;
 }
 .primary {

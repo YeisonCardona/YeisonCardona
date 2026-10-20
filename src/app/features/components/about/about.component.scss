@@ -1,6 +1,5 @@
 @use '@angular/material' as mat;
 
-// Customize the entire app. Change :root to your selector if you want to scope the styles.
 :host {
   @include mat.chips-overrides(
     (
@@ -10,7 +9,6 @@
 }
 
 mat-chip {
-  //border: 1px solid red;
   background-color: var(--mat-sys-surface-container) !important;
   margin: 4px;
 }

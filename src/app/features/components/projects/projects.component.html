@@ -1,1 +1,56 @@
-<app-page title="Projects"></app-page>
+<app-page title="Featured Projects">
+  <p class="text-align-justify">
+    A selection of systems, open-source tools, and production applications I have engineered. These
+    projects reflect my work across <strong>full-stack development</strong>, low-latency
+    <strong>signal processing</strong>, and deterministic <strong>AI workflows</strong>.
+  </p>
+
+  <div class="margin-top-large"></div>
+
+  <mat-card appearance="raised">
+    <div class="grid-responsive-auto-500 no-gap">
+      <div>
+        <div class="image"></div>
+
+        <div class="flex-row margin-medium">
+          <a matButton="tonal" href="https://www.google.com/" target="_blank">
+            <div class="flex-row align-items-center">
+              <i class="primary devicon devicon-github-original"></i>
+              <span class="normal-text">GitHub</span>
+            </div>
+          </a>
+
+          <a matButton="tonal" href="https://www.google.com/" target="_blank">
+            <div class="flex-row align-items-center">
+              <i class="primary devicon devicon-python-plain"></i>
+              <span class="normal-text">PyPi</span>
+            </div>
+          </a>
+          <a matButton="tonal" href="https://www.google.com/" target="_blank">
+            <div class="flex-row align-items-center">
+              <i class="primary devicon devicon-readthedocs-original"></i>
+              <span class="normal-text">Documentation</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <mat-card-header>
+          <mat-card-title>
+            <span class="primary mat-font-title-lg">Title</span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="margin-top-medium" [innerHTML]="`jajaja`"></p>
+        </mat-card-content>
+        <mat-card-footer>
+          <mat-chip-set class="margin-top-medium margin-bottom-small margin-left-medium">
+            <mat-chip><span class="normal small">charming</span></mat-chip>
+            <mat-chip><span class="normal small">graceful</span></mat-chip>
+            <mat-chip><span class="normal small">sassy</span></mat-chip>
+          </mat-chip-set>
+        </mat-card-footer>
+      </div>
+    </div>
+  </mat-card>
+</app-page>

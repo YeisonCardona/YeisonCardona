@@ -1,1 +1,25 @@
-<app-page title="Professional & Research Interests"></app-page>
+<app-page title="Professional & Research Interests">
+  <p class="text-align-justify">
+    My professional practice and ongoing technical research focus on four key domains: building
+    <strong>resilient web and backend systems</strong>, engineering low-latency
+    <strong>signal processing pipelines</strong>, and streamlining
+    <strong>edge AI workflows</strong> for developer productivity.
+  </p>
+
+  <div class="grid-responsive-2 margin-top-extra-large">
+    @for (interest of professionalInterests; track $index) {
+      <mat-card appearance="raised">
+        <mat-card-header>
+          <mat-card-title>
+            <span class="primary mat-font-title-lg">
+              {{ interest.title }}
+            </span>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p [innerHTML]="interest.description"></p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</app-page>
