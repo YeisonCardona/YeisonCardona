@@ -25,6 +25,7 @@ jobs:
 
           chmod 600 ~/.ssh/ng_base_key
 
+          cat <<EOF > ~/.ssh/config
           Host github-ngbase
             HostName github.com
             User git
