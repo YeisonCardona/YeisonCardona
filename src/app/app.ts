@@ -4,7 +4,6 @@ import {
   HostListener,
   QueryList,
   signal,
-  ViewChild,
   ViewChildren,
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -15,6 +14,7 @@ import { AboutComponent } from './features/components/about/about.component';
 import { InterestComponent } from './features/components/interest/interest.component';
 import { ProjectsComponent } from './features/components/projects/projects.component';
 import { ContactComponent } from './features/components/contact/contact.component';
+import { LibrariesComponent } from './features/components/libraries/libraries.component';
 import { ThemeSwitcherComponent } from '@shared/services/theme/switcher/switcher.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,7 +23,6 @@ import { ColorGeneratorService } from './core/services/color-generator/color-gen
 
 @Component({
   imports: [
-    RouterOutlet,
     HeaderComponent,
     AboutComponent,
     InterestComponent,
@@ -33,6 +32,7 @@ import { ColorGeneratorService } from './core/services/color-generator/color-gen
     MatIconModule,
     MatButtonModule,
     IconButtonComponent,
+    LibrariesComponent,
   ],
   selector: 'app-root',
   styleUrl: './app.scss',
@@ -49,8 +49,8 @@ export class App {
   ) {
     this.iconRegistry.setDefaultFontSetClass('material-symbols-rounded');
 
-    // const color = colorGeneratorService.getNextColor();
-    // this.themeService.applyMaterialThemeFromColor(color);
+    const color = colorGeneratorService.getNextColor();
+    this.themeService.applyMaterialThemeFromColor(color);
 
     setInterval(() => {
       const color = colorGeneratorService.getNextColor();

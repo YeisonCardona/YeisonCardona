@@ -20,19 +20,41 @@ mat-chip span {
   font-size: 24px;
 }
 
+.devicon-chip {
+  font-size: 18px;
+}
+
 .image {
   margin: 1rem;
   border-radius: var(--mat-sys-corner-medium);
 
   //filter: grayscale(1);
 
-  background-image: url(https://yeisoncardona.com/assets/images/projects/bciframework.gif);
+  background-image: var(--image);
   width: calc(100% - 2rem);
   height: 500px;
   background-size: cover;
-  background-position: center;
+  background-position: left top;
 }
 
-mat-card:hover .image {
-  filter: grayscale(0);
+//mat-card:hover .image {
+//  filter: grayscale(0);
+//}
+
+.icon-image {
+  width: 64px;
+  height: 64px;
+  background-size: 64px;
+  background-position: center;
+  background-image: var(--image);
+}
+
+.icon-image--container {
+  left: 1rem;
+  top: 1rem;
+  position: absolute;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 1rem;
+  border-radius: 500px;
 }

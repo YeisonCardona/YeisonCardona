@@ -1,0 +1,15 @@
+@import 'prismjs/themes/prism-tomorrow.css';
+
+pre[class*='language-'] {
+  border-radius: var(--mat-sys-corner-medium);
+  background-color: var(--mat-sys-on-secondary-fixed);
+  font-size: 0.8rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  //border-radius: 8px;
+  //padding: 1rem;
+  //margin: 1rem 0;
+  //background-color: #1e1e1e;
+}

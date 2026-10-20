@@ -1,1 +1,22 @@
-<app-page title="Contact"></app-page>
+<app-page title="Contact">
+  <p class="text-align-justify">
+    Whether you have a specific project in mind, need technical consulting, or just want to discuss
+    software engineering and neurotechnology, feel free to reach out.
+  </p>
+
+  <button matButton="filled" (click)="displayInformation()" class="margin-top-large">
+    <span class="margin-right-medium">Show contact information</span>
+    <mat-icon>{{ displayed() ? 'check' : 'visibility' }}</mat-icon>
+  </button>
+
+  <div class="margin-top-large">
+    <mat-list>
+      @for (data of getInformation(); track $index) {
+        <mat-list-item>
+          <span matListItemTitle>{{ data.label }}:</span>
+          <span matListItemLine>{{ data.value }}</span>
+        </mat-list-item>
+      }
+    </mat-list>
+  </div>
+</app-page>

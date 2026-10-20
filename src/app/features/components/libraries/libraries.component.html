@@ -1,0 +1,88 @@
+<app-page title="Open Source & Libraries">
+  <p class="text-align-justify">
+    A collection of <strong>open-source libraries</strong>, utilities, and
+    <strong>internal development tools</strong> that I designed, packaged, and continuously maintain
+    to streamline my own workflows and accelerate development across projects.
+  </p>
+
+  <div class="margin-top-large"></div>
+
+  <mat-card appearance="raised">
+    <div class="grid-responsive-auto-500 no-gap">
+      <div class="margin-top-medium margin-left-medium margin-bottom-medium">
+        <mat-accordion>
+          @for (project of libraryList; track $index) {
+            <mat-expansion-panel [expanded]="$index === 0" (opened)="onPanelOpened($index)">
+              <mat-expansion-panel-header>
+                <mat-panel-title>{{ project.title }}</mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <mat-card-header>
+                <mat-card-title>
+                  <span class="primary mat-font-title-lg">{{ project.subtitle }}</span>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="margin-top-medium mat-font-body-md" [innerHTML]="project.description"></p>
+              </mat-card-content>
+              <mat-card-footer>
+                <mat-chip-set class="margin-top-medium margin-left-medium">
+                  @for (tech of project.labels; track $index) {
+                    <mat-chip>
+                      <div class="flex-row align-content-center gap-medium">
+                        <span class="normal small">{{ tech }}</span>
+                      </div>
+                    </mat-chip>
+                  }
+                </mat-chip-set>
+              </mat-card-footer>
+            </mat-expansion-panel>
+          }
+        </mat-accordion>
+      </div>
+
+      <div>
+        @if (selectedProjectMedia().headerImage; as headerLink) {
+          <div class="icon-image--container">
+            <div class="icon-image" [style.--image]="'url(' + headerLink + ')'"></div>
+          </div>
+        }
+
+        @if (selectedProjectMedia().sampleScript; as sampleScript) {
+          <div class="margin-left-medium margin-right-medium margin-top-medium">
+            <app-code-block [code]="sampleScript" language="python"> </app-code-block>
+          </div>
+        }
+
+        <div class="flex-row margin-medium">
+          @if (selectedProjectMedia().githubUrl; as githubLink) {
+            <a matButton="tonal" href="{{ githubLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-github-original"></i>
+                <span class="normal-text">GitHub</span>
+              </div>
+            </a>
+          }
+
+          @if (selectedProjectMedia().pypiUrl; as pypyLink) {
+            <a matButton="tonal" href="{{ pypyLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-python-plain"></i>
+                <span class="normal-text">PyPi</span>
+              </div>
+            </a>
+          }
+
+          @if (selectedProjectMedia().docsURL; as docsLink) {
+            <a matButton="tonal" href="{{ docsLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-readthedocs-original"></i>
+                <span class="normal-text">Documentation</span>
+              </div>
+            </a>
+          }
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</app-page>

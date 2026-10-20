@@ -14,9 +14,9 @@ mat-chip {
 }
 
 mat-chip.highlighted-chip {
-  background-color: var(--mat-sys-primary-container) !important;
+  background-color: var(--mat-sys-secondary-container) !important;
 }
 
 mat-chip.highlighted-chip span {
-  color: var(--mat-sys-on-primary-container) !important;
+  color: var(--mat-sys-on-secondary-container) !important;
 }

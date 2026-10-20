@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.chips-overrides(
+    (
+      outline-width: 0,
+    )
+  );
+}
+
+mat-chip {
+  background-color: var(--mat-sys-secondary-container) !important;
+}
+
+mat-chip span {
+  color: var(--mat-sys-on-secondary-container) !important;
+}

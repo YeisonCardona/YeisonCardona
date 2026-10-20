@@ -10,46 +10,76 @@
   <mat-card appearance="raised">
     <div class="grid-responsive-auto-500 no-gap">
       <div>
-        <div class="image"></div>
+        @if (selectedProjectMedia().headerImage; as headerLink) {
+          <div class="icon-image--container">
+            <div class="icon-image" [style.--image]="'url(' + headerLink + ')'"></div>
+          </div>
+        }
+
+        @if (selectedProjectMedia().imageUrl; as imageLink) {
+          <div class="image" [style.--image]="'url(' + imageLink + ')'"></div>
+        }
 
         <div class="flex-row margin-medium">
-          <a matButton="tonal" href="https://www.google.com/" target="_blank">
-            <div class="flex-row align-items-center">
-              <i class="primary devicon devicon-github-original"></i>
-              <span class="normal-text">GitHub</span>
-            </div>
-          </a>
+          @if (selectedProjectMedia().githubUrl; as githubLink) {
+            <a matButton="tonal" href="{{ githubLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-github-original"></i>
+                <span class="normal-text">GitHub</span>
+              </div>
+            </a>
+          }
 
-          <a matButton="tonal" href="https://www.google.com/" target="_blank">
-            <div class="flex-row align-items-center">
-              <i class="primary devicon devicon-python-plain"></i>
-              <span class="normal-text">PyPi</span>
-            </div>
-          </a>
-          <a matButton="tonal" href="https://www.google.com/" target="_blank">
-            <div class="flex-row align-items-center">
-              <i class="primary devicon devicon-readthedocs-original"></i>
-              <span class="normal-text">Documentation</span>
-            </div>
-          </a>
+          @if (selectedProjectMedia().pypiUrl; as pypyLink) {
+            <a matButton="tonal" href="{{ pypyLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-python-plain"></i>
+                <span class="normal-text">PyPi</span>
+              </div>
+            </a>
+          }
+
+          @if (selectedProjectMedia().docsURL; as docsLink) {
+            <a matButton="tonal" href="{{ docsLink }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-readthedocs-original"></i>
+                <span class="normal-text">Documentation</span>
+              </div>
+            </a>
+          }
         </div>
       </div>
-      <div>
-        <mat-card-header>
-          <mat-card-title>
-            <span class="primary mat-font-title-lg">Title</span>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="margin-top-medium" [innerHTML]="`jajaja`"></p>
-        </mat-card-content>
-        <mat-card-footer>
-          <mat-chip-set class="margin-top-medium margin-bottom-small margin-left-medium">
-            <mat-chip><span class="normal small">charming</span></mat-chip>
-            <mat-chip><span class="normal small">graceful</span></mat-chip>
-            <mat-chip><span class="normal small">sassy</span></mat-chip>
-          </mat-chip-set>
-        </mat-card-footer>
+      <div class="margin-top-medium margin-right-medium margin-bottom-medium">
+        <mat-accordion>
+          @for (project of projectList; track $index) {
+            <mat-expansion-panel [expanded]="$index === 0" (opened)="onPanelOpened($index)">
+              <mat-expansion-panel-header>
+                <mat-panel-title>{{ project.title }}</mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <mat-card-header>
+                <mat-card-title>
+                  <span class="primary mat-font-title-lg">{{ project.subtitle }}</span>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <p class="margin-top-medium mat-font-body-md" [innerHTML]="project.description"></p>
+              </mat-card-content>
+              <mat-card-footer>
+                <mat-chip-set class="margin-top-medium margin-left-medium">
+                  @for (tech of project.technologies; track $index) {
+                    <mat-chip>
+                      <div class="flex-row align-content-center gap-medium">
+                        <i class="primary devicon-chip {{ tech.icon }}"></i>
+                        <span class="normal small">{{ tech.name }}</span>
+                      </div>
+                    </mat-chip>
+                  }
+                </mat-chip-set>
+              </mat-card-footer>
+            </mat-expansion-panel>
+          }
+        </mat-accordion>
       </div>
     </div>
   </mat-card>
