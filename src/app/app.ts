@@ -89,7 +89,7 @@ export class App {
       }
     });
 
-    if (closestElement && minDistance < 300) {
+    if (closestElement && minDistance < 400) {
       this.isAutoScrolling = true;
 
       this.currentIndex = closestIndex;
