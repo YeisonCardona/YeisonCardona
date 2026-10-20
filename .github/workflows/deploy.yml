@@ -27,11 +27,11 @@ jobs:
           cache-dependency-path: 'package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./portfolio-spa
+        working-directory: .
         run: npm install
 
       - name: Build
-        working-directory: ./portfolio-spa
+        working-directory: .
         run: npm run build -- --base-href "/"
 
       - name: Create CNAME file

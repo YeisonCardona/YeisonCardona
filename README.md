@@ -1,59 +1,75 @@
-# App
+# 👨‍💻 Yeison N. Cardona A.
+**PhD(c) in Automation | MSc in Industrial Automation | Electronic Engineer | Backend & BCI Researcher**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.3.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://linkedin.com/in/yeisoncardona)
+[![GitHub](https://img.shields.io/badge/GitHub-%40YeisonCardona-black?logo=github)](https://github.com/YeisonCardona)
+[![Website](https://img.shields.io/badge/DunderLab-Organization-darkgreen)](https://github.com/DunderLab)
 
-## Development server
+---
 
-To start a local development server, run:
+### 🧠 About Me
 
-```bash
-ng serve
-```
+I’m a multidisciplinary engineer with 10+ years of Python experience, currently a **PhD candidate** and adjunct professor at **Universidad Nacional de Colombia** (*Digital Signal Processing*).  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+I specialize in **backend engineering, DevOps, and brain-computer interfaces (BCI)**, bridging **hardware and software** for real-time, scalable systems. My work spans:
 
-## Code scaffolding
+- 🧠 Neurotechnology, BCI & biomedical signal processing  
+- 🖥️ Backend & API development with microservices and CI/CD  
+- 📊 Data pipelines, monitoring, and observability stacks  
+- 📡 Embedded systems, FPGA design, and SDR prototyping  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+### 🛠️ Tech Stack & Tools
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Languages:** Python, C/C++, Bash, TypeScript, JavaScript, VHDL/Verilog, HTML/CSS  
+- **Frameworks:** FastAPI, Django, Flask, Angular, React, TensorFlow, PyTorch, Keras  
+- **Cloud & DevOps:** Docker, Kubernetes, GitHub Actions, GCP, AWS, Azure, Terraform  
+- **Databases:** PostgreSQL, TimescaleDB, SQLite, MySQL, MongoDB, Redis  
+- **Embedded & Hardware:** ESP32, STM32, Raspberry Pi, OpenBCI, FPGA (Xilinx/Intel)  
+- **UI/UX:** PyQt, PySide, Dash, Angular Material, Brython  
+- **Others:** Kafka, Prometheus, Grafana, Sphinx, 3D Printing, CNC  
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+### 🚀 Featured Projects
 
-To build the project run:
+- [`CtenoLab`](https://cteno.dunderlab.com): Real-time BCI experimentation platform with hardware triggers & TensorFlow Serving  
+- [`Radiant-Wrapper`](https://github.com/dunderlab/radiant-wrapper): Python-to-Android build system with Docker & GitHub Actions  
+- [`Chaski-Confluent`](https://chaski.dunderlab.com): Distributed messaging framework with AI-driven routing  
+- [`BCI-Framework`](https://github.com/UN-GCPDS/bci-framework): EEG experiments and real-time visualization tools  
+- [`Qt-Material`](https://github.com/UN-GCPDS/qt-material): Material Design stylesheet for PyQt/PySide  
+- [`OpenBCI-Stream`](https://github.com/UN-GCPDS/openbci-stream): EEG/EMG/ECG data streaming framework  
 
-```bash
-ng build
-```
+📂 [More projects](https://github.com/YeisonCardona?tab=repositories) on GitHub.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+### 📍 Current Roles
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- 🧑‍🏫 Adjunct Professor – Universidad Nacional de Colombia (DSP course)  
+- 🧠 Researcher – BCI, SDR & Neurotechnology Projects  
+- 🧑‍💻 Technical Lead – Microservices & Cloud Architectures @ Disered  
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+### 🗣️ Languages
+- 🇪🇸 Spanish – Native  
+- 🇬🇧 English – Advanced (B2)  
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+📫 **Let’s connect:**  
+- Email: [yencardonaal@unal.edu.co](mailto:yencardonaal@unal.edu.co)  
+- Location: Manizales, Colombia  
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+### 🌐 Portfolio Website
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+My full professional portfolio is available at **[yeisoncardona.com](https://yeisoncardona.com)**  
+
+It showcases:
+- 🚀 Highlighted projects (CtenoLab, Radiant-Wrapper, Chaski, BCI-Framework)  
+- 📊 Research and publications  
+- 📂 Open-source contributions  
