@@ -5,9 +5,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIcon } from '@angular/material/icon';
 
 type ProjectMedia = Record<
-  'githubUrl' | 'pypiUrl' | 'docsURL' | 'headerImage' | 'imageUrl',
+  'githubUrl' | 'pypiUrl' | 'docsURL' | 'headerImage' | 'imageUrl' | 'googlePlay' | 'webPage',
   string
 >;
 
@@ -21,6 +22,7 @@ type ProjectMedia = Record<
     MatChipsModule,
     MatButtonModule,
     MatExpansionModule,
+    MatIcon,
   ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
@@ -34,15 +36,22 @@ export class ProjectsComponent {
     docsURL: 'https://qt-material.readthedocs.io/en/latest/',
     headerImage: '/assets/images/projects/qtmaterial_header.png',
     imageUrl: '/assets/images/projects/qtmaterial.gif',
+    googlePlay: '',
+    webPage: '',
   });
 
   projectList = [
     {
-      title: 'Red de Monitoreo',
-      subtitle: 'Real-Time Neurocognitive Experiments in the Browser',
+      title: 'RF Spectrum Monitoring Network',
+      subtitle: 'Distributed Electromagnetic Spectrum Sensing via SDR',
       description:
-        'CtenoLab enables EEG and BCI paradigms directly in the browser with precise hardware synchronization, combining WebUSB/WebSerial integration and real-time control for flexible neurophysiological research.',
-      technologies: [{ name: 'Angular', icon: 'devicon-angularjs-plain' }],
+        'Designed a distributed spectrum monitoring network for the National Spectrum Agency (ANE) to capture, analyze, and map electromagnetic activity in real time using Software-Defined Radio (SDR) nodes and edge-processing architectures.',
+      technologies: [
+        { name: 'Angular', icon: 'devicon-angularjs-plain' },
+        { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
+        { name: 'Django REST Framework', icon: 'devicon-django-plain' },
+        { name: 'Raspberry Pi', icon: 'devicon-raspberrypi-plain' },
+      ],
       githubUrl: '',
       pypiUrl: '',
       docsURL: '',
@@ -50,53 +59,74 @@ export class ProjectsComponent {
       imageUrl: '/assets/images/projects/red_ane.png',
     },
     {
-      title: 'CtenoLab',
-      subtitle: 'Real-Time Neurocognitive Experiments in the Browser',
+      title: 'Upstream',
+      subtitle: 'Technical Knowledge & System Design Review Platform',
       description:
-        'CtenoLab enables EEG and BCI paradigms directly in the browser with precise hardware synchronization, combining WebUSB/WebSerial integration and real-time control for flexible neurophysiological research.',
-      technologies: [{ name: 'Angular', icon: 'devicon-angularjs-plain' }],
+        'A technical review platform designed for software engineers to reinforce advanced concepts in system design, distributed architectures, databases, and backend engineering through expert-reviewed, concise content.',
+      technologies: [
+        { name: 'Angular', icon: 'devicon-angularjs-plain' },
+        { name: 'Android', icon: 'devicon-android-plain' },
+        { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
+      ],
       githubUrl: '',
       pypiUrl: '',
       docsURL: '',
-      headerImage: '/assets/images/projects/cteno.png',
-      imageUrl: '/assets/images/projects/cteno.gif',
+      googlePlay: 'https://play.google.com/store/apps/details?id=com.dunderlab.upstream',
+      headerImage: '/assets/images/projects/upstream_icon.svg',
+      imageUrl: '/assets/images/projects/upstream.jpg',
     },
     {
-      title: 'BCI-Framework',
-      subtitle:
-        'Distributed processing tool for stimuli delivery, experiment design and real-time visualizations with OpenBCI.',
+      title: 'Cteno',
+      subtitle: 'Mobile EEG/BCI Experimental Paradigm App',
       description:
-        'Open-source platform for EEG/EMG/ECG acquisition built around OpenBCI hardware. It streams data in real time, offers distributed processing and a PySide-based interface to visualize signals and deliver stimuli. Users can design custom neurophysiological experiments and analyze biosignals through its integrated tools.',
+        'A mobile application for real-time EEG and BCI experimental paradigm execution. Features native USB serial synchronization for low-latency hardware trigger delivery and precise neurophysiological research.',
+      technologies: [
+        { name: 'Angular', icon: 'devicon-angularjs-plain' },
+        { name: 'Android', icon: 'devicon-android-plain' },
+        { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
+      ],
+      githubUrl: '',
+      pypiUrl: '',
+      docsURL: '',
+      webPage: 'https://cteno.dunderlab.com/#/home',
+      googlePlay: 'https://play.google.com/store/apps/details?id=com.dunderlab.cteno',
+      headerImage: '/assets/images/projects/cteno_icon.svg',
+      imageUrl: '/assets/images/projects/cteno.jpg',
+    },
+    {
+      title: 'BCI Framework',
+      subtitle: 'Desktop Suite for EEG Acquisition & Experiment Design',
+      description:
+        'A comprehensive desktop platform engineered for real-time biosignal acquisition, hardware interfacing with EEG amplifiers, and custom experiment design. Features a PySide-based GUI for live signal visualization, low-latency stimuli delivery, and distributed data processing.',
       technologies: [
         { name: 'Python', icon: 'devicon-python-plain' },
         { name: 'Qt', icon: 'devicon-qt-original' },
         { name: 'Kafka', icon: 'devicon-apachekafka-original' },
-        { name: 'Scikit-Learn', icon: 'devicon-scikitlearn-plain' },
         { name: 'Docker', icon: 'devicon-docker-plain' },
       ],
       githubUrl: 'https://github.com/dunderlab/bci-framework',
       pypiUrl: 'https://pypi.org/project/bci-framework/',
-      docsURL: 'bci-framework.readthedocs.io/en/latest/',
+      docsURL: 'https://bci-framework.readthedocs.io/en/latest/',
       headerImage: '/assets/images/projects/bciframework_header.png',
       imageUrl: '/assets/images/projects/bciframework.gif',
     },
 
-    {
-      title: 'Qt-Material',
-      subtitle: 'Modern stylesheet library for PySide6 and PyQt6 inspired by Material Design.',
-      description:
-        'Qt-Material brings Material Design stylesheets to Qt applications. It includes dark and light themes with customizable colors and fonts, supports runtime theme switching, and can export stylesheets for standalone use.',
-      technologies: [
-        { name: 'Python', icon: 'devicon-python-plain' },
-        { name: 'Qt', icon: 'devicon-qt-original' },
-        { name: 'CSS3', icon: 'devicon-css3-plain' },
-      ],
-      githubUrl: 'https://github.com/dunderlab/qt-material.git',
-      pypiUrl: 'https://pypi.org/project/qt-material/',
-      docsURL: 'https://qt-material.readthedocs.io/en/latest/',
-      headerImage: '/assets/images/projects/qtmaterial_header.png',
-      imageUrl: '/assets/images/projects/qtmaterial.gif',
-    },
+    // {
+    //   title: 'Qt-Material',
+    //   subtitle: 'Material Design Stylesheet Library for PySide & PyQt',
+    //   description:
+    //     'An open-source theme engine that brings Google Material Design to Python Qt desktop applications. Supports dynamic runtime theme switching, custom color palettes, density controls, and exportable stylesheets for PySide6, PyQt6, and PyQt5.',
+    //   technologies: [
+    //     { name: 'Python', icon: 'devicon-python-plain' },
+    //     { name: 'Qt', icon: 'devicon-qt-original' },
+    //     { name: 'CSS3', icon: 'devicon-css3-plain' },
+    //   ],
+    //   githubUrl: 'https://github.com/dunderlab/qt-material.git',
+    //   pypiUrl: 'https://pypi.org/project/qt-material/',
+    //   docsURL: 'https://qt-material.readthedocs.io/en/latest/',
+    //   headerImage: '/assets/images/projects/qtmaterial_header.png',
+    //   imageUrl: '/assets/images/projects/qtmaterial.gif',
+    // },
 
     {
       title: 'Chaski Confluent',
@@ -111,23 +141,23 @@ export class ProjectsComponent {
       imageUrl: '/assets/images/projects/chaski.png',
     },
 
-    {
-      title: 'Dunderlab - visualizations',
-      subtitle: 'Brain connectivities, accuracy gain comparison, EEG and topoplot visualizations',
-      description:
-        'Set of tools for displaying brain connectivity and EEG information in Python. Includes circos plots, accuracy gain charts, and topoplots built on Matplotlib and MNE.',
-      technologies: [
-        { name: 'Python', icon: 'devicon-python-plain' },
-        { name: 'Matplotlib', icon: 'devicon-matplotlib-plain' },
-        { name: 'NumPy', icon: 'devicon-numpy-plain' },
-        { name: 'Flask', icon: 'devicon-flask-original' },
-      ],
-      githubUrl: 'https://github.com/dunderlab/python-dunderlab.visualizations',
-      pypiUrl: '',
-      docsURL: 'https://dunderlab.readthedocs.io/projects/Visualizations/en/latest/',
-      imageUrl: '/assets/images/projects/dunderlabvis.png',
-      headerImage: '/assets/images/projects/dunderlabvis_header.png',
-    },
+    // {
+    //   title: 'Dunderlab - Visualizations',
+    //   subtitle: 'Brain connectivities, accuracy gain comparison, EEG and topoplot visualizations',
+    //   description:
+    //     'Set of tools for displaying brain connectivity and EEG information in Python. Includes circos plots, accuracy gain charts, and topoplots built on Matplotlib and MNE.',
+    //   technologies: [
+    //     { name: 'Python', icon: 'devicon-python-plain' },
+    //     { name: 'Matplotlib', icon: 'devicon-matplotlib-plain' },
+    //     { name: 'NumPy', icon: 'devicon-numpy-plain' },
+    //     { name: 'Flask', icon: 'devicon-flask-original' },
+    //   ],
+    //   githubUrl: 'https://github.com/dunderlab/python-dunderlab.visualizations',
+    //   pypiUrl: '',
+    //   docsURL: 'https://dunderlab.readthedocs.io/projects/Visualizations/en/latest/',
+    //   imageUrl: '/assets/images/projects/dunderlabvis.png',
+    //   headerImage: '/assets/images/projects/dunderlabvis_header.png',
+    // },
 
     // {
     //   title: 'Radiant: A Pythonic Web Framework',
@@ -205,11 +235,13 @@ export class ProjectsComponent {
     const project = this.projectList[index];
 
     this.selectedProjectMedia.set({
-      githubUrl: project.githubUrl,
-      pypiUrl: project.pypiUrl,
-      docsURL: project.docsURL,
-      headerImage: project.headerImage,
-      imageUrl: project.imageUrl,
+      githubUrl: project.githubUrl ?? '',
+      pypiUrl: project.pypiUrl ?? '',
+      docsURL: project.docsURL ?? '',
+      headerImage: project.headerImage ?? '',
+      imageUrl: project.imageUrl ?? '',
+      googlePlay: project.googlePlay ?? '',
+      webPage: project.webPage ?? '',
     });
   }
 }

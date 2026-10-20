@@ -15,3 +15,16 @@ mat-chip {
 mat-chip span {
   color: var(--mat-sys-on-secondary-container) !important;
 }
+
+mat-card-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.devicon {
+  font-size: 24px;
+}
+
+.devicon-chip {
+  font-size: 18px;
+}

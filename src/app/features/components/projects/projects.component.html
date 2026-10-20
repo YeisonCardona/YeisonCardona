@@ -47,6 +47,24 @@
               </div>
             </a>
           }
+
+          @if (selectedProjectMedia().googlePlay; as googlePlay) {
+            <a matButton="tonal" href="{{ googlePlay }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <i class="primary devicon devicon-android-plain"></i>
+                <span class="normal-text">Google Play</span>
+              </div>
+            </a>
+          }
+          @if (selectedProjectMedia().webPage; as webPage) {
+            <a matButton="tonal" href="{{ webPage }}" target="_blank">
+              <div class="flex-row align-items-center">
+                <!--                <i class="primary devicon devicon-android-plain"></i>-->
+                <mat-icon class="primary">captive_portal</mat-icon>
+                <span class="normal-text">Webpage</span>
+              </div>
+            </a>
+          }
         </div>
       </div>
       <div class="margin-top-medium margin-right-medium margin-bottom-medium">

@@ -1,4 +1,12 @@
-import { Component, Input, ElementRef, ViewChild, AfterViewInit, OnChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  ElementRef,
+  ViewChild,
+  AfterViewInit,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import * as Prism from 'prismjs';
 
 import 'prismjs/components/prism-python';
@@ -26,13 +34,18 @@ export class CodeBlockComponent implements AfterViewInit, OnChanges {
     this.highlight();
   }
 
-  ngOnChanges(): void {
-    this.highlight();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.codeContainer && (changes['code'] || changes['language'])) {
+      this.highlight();
+    }
   }
 
   private highlight(): void {
-    if (this.codeContainer) {
-      Prism.highlightElement(this.codeContainer.nativeElement);
-    }
+    if (!this.codeContainer) return;
+    queueMicrotask(() => {
+      const el = this.codeContainer.nativeElement;
+      el.textContent = this.code;
+      Prism.highlightElement(el);
+    });
   }
 }
