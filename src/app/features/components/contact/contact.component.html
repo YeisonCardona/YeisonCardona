@@ -10,13 +10,13 @@
   </button>
 
   <div class="margin-top-large">
-    <mat-list>
+    <div class="flex-column">
       @for (data of getInformation(); track $index) {
-        <mat-list-item>
-          <span matListItemTitle>{{ data.label }}:</span>
-          <span matListItemLine>{{ data.value }}</span>
-        </mat-list-item>
+        <div>
+          <span class="mat-font-body-lg medium">{{ data.label }}:</span> <br />
+          <span class="mat-font-body-lg text-wrap-balance">{{ data.value }}</span>
+        </div>
       }
-    </mat-list>
+    </div>
   </div>
 </app-page>
