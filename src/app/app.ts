@@ -19,6 +19,7 @@ import { ThemeSwitcherComponent } from '@shared/services/theme/switcher/switcher
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { IconButtonComponent } from './core/components/icon-button/icon-button.component';
+import { ColorGeneratorService } from './core/services/color-generator/color-generator.service';
 
 @Component({
   imports: [
@@ -36,6 +37,7 @@ import { IconButtonComponent } from './core/components/icon-button/icon-button.c
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
+  standalone: true,
 })
 export class App {
   protected readonly title = signal('app');
@@ -43,12 +45,17 @@ export class App {
   constructor(
     private iconRegistry: MatIconRegistry,
     private themeService: ThemeService,
-  ) {}
-
-  ngAfterViewInit() {
+    colorGeneratorService: ColorGeneratorService,
+  ) {
     this.iconRegistry.setDefaultFontSetClass('material-symbols-rounded');
-    const color = this.themeService.generateRandomColor();
-    this.themeService.applyMaterialThemeFromColor(color);
+
+    // const color = colorGeneratorService.getNextColor();
+    // this.themeService.applyMaterialThemeFromColor(color);
+
+    setInterval(() => {
+      const color = colorGeneratorService.getNextColor();
+      this.themeService.applyMaterialThemeFromColor(color);
+    }, 500);
   }
 
   @ViewChildren('container') containerElements!: QueryList<ElementRef<HTMLDivElement>>;
